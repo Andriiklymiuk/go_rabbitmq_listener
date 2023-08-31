@@ -8,11 +8,11 @@ import (
 )
 
 type EnvConfig struct {
-	Host       string `env:"RABBITMQ_DB_HOST,required"`
-	User       string `env:"RABBITMQ_DB_USER,required"`
-	Port       int    `env:"RABBITMQ_DB_PORT,required"`
+	Host       string `env:"RABBITMQ_HOST,required"`
+	User       string `env:"RABBITMQ_USER,required"`
+	Port       int    `env:"RABBITMQ_PORT,required"`
 	ServerPort int    `env:"PORT,required"`
-	Password   string `env:"RABBITMQ_DB_PASSWORD,required"`
+	Password   string `env:"RABBITMQ_PASSWORD,required"`
 }
 
 func LoadConnectionConfig() (*EnvConfig, error) {
