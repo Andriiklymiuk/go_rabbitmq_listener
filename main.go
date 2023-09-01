@@ -75,7 +75,12 @@ func main() {
 				fmt.Println(utils.RedColor, err, utils.WhiteColor)
 				return
 			}
-			fmt.Println("You received message: ", message.Data.Message)
+			fmt.Println(
+				"GO server received message: ",
+				message.Data.Message,
+				"with id",
+				message.Data.Id,
+			)
 		}()
 	}
 
